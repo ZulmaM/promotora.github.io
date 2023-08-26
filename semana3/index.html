@@ -1,0 +1,169 @@
+<!--Hola, para empezar a trabajar con codigo ya debimos haber creado un archivo de nombre index.html.
+Por ende el siguiente paso es poner html y seleccionamos la opcion html5, y automaticamente el visual studio
+nos muestra nuestras primeras etiquetas y lo que vamos a hacer aca es cambiar el idioma dentro de 
+la etiqueta <html lang="es">  para que mi pagina se visualice en español,
+de esta forma vamos a ir  comentando el paso a paso de como creamos nuestra landing page primero van a ver 
+el comentario y abajo el ejemplo implementado en codigo-->
+<!DOCTYPE html>
+<html lang="es">
+    <!--luego dentro de la etiqueta <head> vamos a visualizar las etiquetas <meta> y luego...-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--debajo de las etiqueta meta vamos a poner la etiqueta <link> para vincular todos los link que
+        vayamos a nesecitar para hacer funcionar nuestra pagina-->
+    <!--primero vinculamos nuestro archivo css, pero ese link debe quedar siempre debajo de cualquier otro 
+     link, para que sea de facil visualizacion en caso de querer cambiar la ruta relativa, debajo de por 
+     ejemplo el link de bootstrap que vinculamos tambien para darle un poquito de dinamismo a la pagina,
+    recuerden que la ruta relativa la ponemos siempre en el atributo href-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+<!-- con la etiqueta title definimos el titulo que queremos que aparezca en la pestaña 
+    del navegador o en los resultados de búsqueda y debajo de este dentro de la etiqueta <link>
+    podemos definir una imagen para que aparezca como icono junto al titulo de nuestro sitio web, para eso
+    vamos a usar el atributo rel="icon" para que se muestre como icono, un hrf donde 
+    colocamos al ruta relativa de la imagen que queremos poner y el atributo type nos sirve 
+    para especificar el tipo de archivo que estás vinculando en este caso una imagen en formato png-->
+    <title>Reaper gaming squad</title>
+    <link rel="icon" href="1-logo-blanco.png" type="image/png">
+</head>
+<body>
+    <!--Ahora bien dentro del <body> lo primero que vamos a hacer es definir la etiqueta semantica <header>
+        para crear el encabezado de mi sitio y dentro de esta vamos a poner del lado izq el logo de la pagina
+        y del lado derecho un logo de inicio de sesion y esto lo hacemos usando la etiqueta <img>que luego 
+        vamos a vinular con nuestro form y para poder pocisionarlo correctamente con css vamos a declararle
+        una class diferente  a cada uno y un id unico para clonar y reutilizar el codigo mediante js-->
+    <header id="header">
+        <img class="logo" src="1-logo-blanco.png" alt="Logo del sitio">
+        <img  class="logoinisesion" src="acceso.png" alt="Logo de inicio de sesión">
+    </header>
+    <!--Una vez que tenemos definido nuestro header ya con todos los detalles en css vamos a ponerle un
+    titulo principal a nuestra pagina y para eso usamos la etiqueta <h1>-->
+    <h1>MIRA PELICULAS COMO SI JUGARAS</h1>
+    <!--despues del titulo vamos a ubicar la etiqueta <main> y dentro de esta vamos a crear 2 contenedores
+    <div> uno derecho y otro izquierdo que los declaramos con class para darle luego estilos con css
+    y usando la etiqueta <p> ubicamos arriba de todo en el primer div el parrafo  
+    explicativo de nuestra pagina debajo ubicamos la etiqueta <buttons> y  creamos dos 
+    botones  para que nuestros usuarios inicien sesion o bien se registren en nuestro sitio, 
+    esto lo vamos a ubicar del lado izquierdo de la pagina y para
+    separar los botones vamos a crear una linea usando un solo elemento que es hr, 
+    recuerden  tener presente el wireframe que hicimos para ir guiandose.Ademas 
+    de eso vamos ubicar del lado derecho la imagen en grande del logo con el nombre de nuestra marca 
+     usando la etiqueta img-->
+    <main>
+        <div class="seccionIzq">
+            <p class="seccionIzqP">Te gustan los videos juegos, 
+                este es tu lugar de 
+                entretenimiento favorita. 
+                Prepara los pochoclos 
+                y elegi tu pelicula favorita
+            </p>
+        <button class="buttoninisesion" id="ButtonIniciar">INICIAR SESION</button>
+    <!-- cuando el usuario haga click en el button se le muestra el formulario de inicio de sesion
+    crear el fornulario llamamos la etiqueta form y vamos a suar el metodo post porque la clave y el 
+    usuario son datos sencibles asi que no deben verse en la url del sitio, le ponemos un titulo con la
+    etiqueta <h2> usamos <label for="email">para crear  al campo de entrada para el correo electrónico
+    junto con el atributo "required" para requerir su llenado<label for="password"> 
+    para crear el campo de entrada de la contraseña
+    <input type="submit" para crear el botón para enviar el formulario y usamos value="Ingresar" para el texto dentro 
+    del boton y un enlace de recuperacion de clave -->
+        <form  class="form" action="" method="post" id="loginForm" style="display: none;">
+            <h6 class="titleForm">DISFRUTA EL MEJOR CONTENIDO</h6>
+            <div>
+                <h2>INICIAR SESION</h2>
+                <label>Ingrese su email, telefono o usuario*</label>
+                <input type="email" id="email" name="email" placeholder="usuario@ejemplo.com" required>
+                <label>ingrese su clave*</label>
+                <input type="password" id="password" name="password" placeholder="**********" required>
+                <input type="submit" value="INGRESAR">
+                <div>
+                    <a class="resetear-clave" href="#">  ¿Olvidaste tu contraseña?</a>
+                </div>
+            </div>
+        </form>        
+        <hr> 
+        <button class="buttonregistrarse">REGISTRARSE</button>
+        </div>
+     <div class="seccionDerecha">
+        <img src="6-logo-color.png" alt="logo de la pagina en grande">
+        </div>
+    </main>
+    <!--Una vez que terminamos de definir el main pasamos nuestra seccion de informacion util para el cliente
+    donde vamos a crear unas card con la imagen redondeada para eso nos vamos a ayudar con bootstrap que tiene unas
+    card predefinidas,pero obviamente le vamos a dar nuestro propio estilo reutilizando las clases predefinidas por
+    bootstrap -->
+    <section class="seccionIndicaciones">
+        <!--para lograr que la imgen sea redondeada vamos a definir un estilo directamente en el elemento 
+        para facilitarnos el trabajo y los demas estilos si se lo damos en la hoja de css, creamo un div
+        contenedor para cada card dentro de este usamos un <h3> para definir el titulo de la seccion recuerden
+        que <h1> se recomienda usar solo 1 por hoja y un elemento <p> para añadir una pequeña descripcion-->
+        <div style="width: 18rem;">
+            <img src="6-logo-negro.png" class="card-img-top" alt="logo negro">
+            <div class="card-body">
+              <h3 class="card-title">¿Donde puedo ver?</h3>
+              <p class="card-text">desde tu dispositivo Celular, Tablet, Compu, TV</p>
+            </div>
+          </div>
+          <div style="width: 18rem;">
+            <img src="1-logo-blanco.png" class="card-img-top" alt="logo blanco">
+            <div class="card-body">
+              <h3 class="card-title">Descargar APP</h3>
+              <p class="card-text">Disponible para sistemas Android y iOS</p>
+            </div>
+          </div>
+          <div  style="width: 18rem;">
+            <img src="6-logo-color.png" class="card-img-top" alt=".logo color">
+            <div class="card-body">
+              <h3 class="card-title">Registrate hoy</h3>
+              <p class="card-text">solo dale click a registrarse completa tus datos y listo</p>
+            </div>
+          </div>
+    </section>
+
+      <!--Y llegamso al final de nuestra primer hoja html y es el momento del foooter, es decir el pie de pagina
+    para eso llamamos a la etiqueta <footer> y dentro de esta armamaos cajitas con div contenedores,
+    en el primero usando la etiqueta <img> ponemos el logo de nuestra pagina y creamos una class para darle
+    estilos en css recuerden que las pueden reutilizar, en el segundo div contenedor vamso a agregar un link externo
+    de las redes sociales para eso usamos la etiqueta <a>, para eso pegamos la ruta relativa en el href,
+    dentro de la etiqueta <a> ponemso una etiqueta <h6> con indicaciones para el usuario, opte por un elemento h6
+    para que vean la diferencia jerarquica de los h1,h2,h3,h4,h5,h6 y para los link de las redes vamso a usar 
+    los iconos para que cuando el usuario ahaga click sobre cualquiera de ellos los redirija a ese red y
+    abajo de todo recuerden poner los derechos de autor del sitio web -->
+    <section>
+        <footer class="estiloFooter" id="footer">
+            <div class="logofooter">
+                <img class="logo" src="1-logo-blanco.png" alt="Logo de la pagina" >
+            </div>
+            <div class="parrafooter">
+                <a class="titfooter" href=" link bases y condiciones"><h6>Leer bases y condiciones</h6></a>
+                <div class="iconoredes">
+                    <a href="https://www.whatsapp.com/" >
+                        <img class="imgredes" src="whatsapp.png" alt="logo whatsapp">
+                    </a>
+                    <a href="https://www.twiter.com/" >
+                        <img class="imgredes" src="twiter.png" alt="logo twitter">
+                    </a>
+                    <a href="https://www.instagram.com/" >
+                        <img class="imgredes" src="instagram.png" alt="logo instagram">
+                    </a>
+                    <a href="https://www.facebook.com/" >
+                        <img class="imgredes" src="facebook.png" alt="logo facebook">
+                    </a>
+                </div>
+            </div>
+            <div class="copyfooter">
+                <p>Trabajo semana 3 - Promotora Zulma Marcos </p>
+            </div> 
+        </footer>
+    </section>
+    <br>
+
+<!--Vamos a usar java script para reutilizar codigo mediante id, recuerden que el id es unico y no se puede
+repetir, para eso vamos a crear un id unico para el header y el footer que es la parte que queremos 
+reutilizar del codigo y eso lo vamos a clonar mediante js -->
+
+<!--Abajo de todo pero dentro del body  ponemos todos los script de JS  ue vayamos a usar-->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

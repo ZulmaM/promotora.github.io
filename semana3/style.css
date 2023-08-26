@@ -1,0 +1,490 @@
+ /* Para empezar a darle estilos a nuestro sitio web vamos a crear un archivo de nombre style.css
+ el cual lo vamos a vincular como bien lo vimos en el archivo html*/
+
+  /*Lo primero que hacemos es resetear todos los estilos que ya viene por defecto en el navegador
+  y para eso utilizamos las siguiente regla css*/
+*{
+    margin: 0;  /* para eliminar cualquier espacio alrededor de mi elemento*/
+    padding: 0; /* para eliminar el relleno entre mi elemento y su borde */
+    box-sizing: border-box; /* el box-sixing define el alto y ancho que va a ocupar mi elemento y al ponerlo
+                             con valor border-box le estamos diciendo que  el ancho y el alto del elemento
+                             debe ocupar solo el relleno y el borde que yo defini para mi elemento*/
+  }
+ /* ahora lo siguiente que hacemos es definir los estilos para el HEADER primero*/
+ header {
+    display: flex; /*utilizamos el modelo de diseño de flexbox y le decimos al header que  va a tener un
+                    diseño flexible de esta manera*/
+    align-items: center; /*utilizando esta propiedad definimos que los elementos del encabezado se centren 
+                          verticalmente a  lo largo del eje cruzado del contenedor*/
+    justify-content: space-between;/* y con esto hacemos que los logos se pocisionen uno al comienzo y otro al final
+                                   de mi contenedor*/
+    padding: 20px 30px 20px 30px; /* y le agregamos algo de relleno para que nuestros elementos no queden 
+                                  tan pegados al borde del header*/
+    background-color: #e43f25; /*y le ponemos un rojo furiozo como color de fondo al header asi los logos 
+                                 resaltan mejor*/
+}
+
+/* vamos a darle estilo al logo de nuestra pagina, para eso llamamos la class logo */
+.logo {
+        display: inline-block; /*primero lo establecemos como un elemento de linea para poder declarar el alto
+                            y ancho que queremos que tenga*/
+    width: 100px; /* Ajustamos el ancho a 100px*/
+    height: auto; /*y el alto lo dejamos en auto porque solo ocupa el alto disponible del elemento header*/
+}
+
+/* y seguimos con el logo de inicio de sesión par eso llamamos la class que corresponda y asi con todos
+mis elementos*/
+.logoinisesion {
+    display: inline-block;/*primero lo establecemos como un elemento de linea para poder declarar el alto
+                              y ancho que queremos que tenga*/
+    width: 58px; /* Ajustamos el ancho según lo que nesecitemos */
+    height: auto;/*y el alto lo dejamos en auto porque solo ocupa el alto disponible del elemento header*/
+    cursor: pointer; /*y le decimos al cursor que cuando pase por encima de mi logo cambie de forma a una mano*/
+}
+ /*ahora vamos a darle estilo al titulo principal de mi pagina*/
+h1{
+    color: #f23f26; /*las letras las queremos rojas*/
+    background-color: #040303; /* y el fondo negro para un mejor contraste*/
+    width: 100%; /* y al poner en % y no en pixeles le decimos que ocupe el ancho total disponible de la página */
+    padding:2px; /* y le agregamos algo de relleno para que nuestros elementos no queden 
+                   tan pegados al borde*/
+    text-indent: 50px; /* Ajustamos nuestro titulo un poco hacia la derecha para que quede sobre nuestro parrafo */
+    margin: 2px ; /*le agregamos un margen para separarlo levemente del header*/
+    font-size: 28px; /*definimos el tamaño de las letras de nuestro h1*/
+    font-family: fantasy; /*declaramos la fuente*/
+}
+
+/*Luego vamos a darle amor a  la seccion main*/
+main{
+    display: flex; /*utilizamos el modelo de diseño de flexbox y le decimos al main que  va a tener un
+    diseño flexible de esta manera*/
+    align-items: center; /*utilizando esta propiedad definimos que los elementos dentro de este se centren 
+          verticalmente */
+    padding: 5px 5px 5px 50px; /* y le agregamos algo de relleno para que nuestros elementos no queden 
+                  tan pegados al borde del header*/
+    background-color: #f3e4ca; /*y le ponemos un color cremita como fongo*/
+                                                                                                                   }
+
+.seccionIzq {
+    display: flex; /*convertimos el contenedor Izq en un contenedor flexible*/
+    flex: 1; /*le damos a flex un valor de 1 para que esta sección ocupe la misma cantidad de espacio
+             horizontal que la sección derecha*/
+    flex-direction: column;/*aca le decimos que los elementos dentro de la seccion izq se colocan en columnas*/
+    justify-content: center; /*centramos los elementos*/
+    padding: 2px; /*y le ponemos algo de relleno*/
+}
+
+/*Seguimos con el parrafo explicativo llamamos la  clase .seccionIzq  y el elemento p y con esto decimos 
+que le vamos a dar estilo al elemento p dentro de la seccionIzq*/
+.seccionIzqP {
+    text-align: center; /*centramos el texto*/
+    justify-content: start; /*lo pocisionamos al inicio del contenedor*/
+    font-size: 38px; /* establecemos el tamaño que queremos que tenga el parrafo*/
+    color: #48332b;/*y le ponemos un color marron para que se diferencie del titulo y demas secciones*/
+    font-family: Georgia;/* y le ponemos ademas un tipografia diferente*/
+    padding: 5px 5px 10px 5px; /* y lo rellenamos siempre en el sentido de las agujas del reloj*/
+}
+
+/* ahora vamos a darle estilos a nuestros botones y lo vamos a hacer llamando a los dos al mismo tiempo
+y lo hacemos de la siguiente manera*/
+.buttoninisesion,
+.buttonregistrarse {
+    width: 100%; /*establecemos un ancho del 100% diponible*/
+    padding: 15px 20px; /*ponemos relleno*/
+    margin: 5px 0; /*y un margen*/
+    background-color: #040303; /*luego establecemos el color de nuestros botones*/
+    color: #f23f26;/*y el de las letras de su interior*/ 
+    font-size: 32px;/*establecemos el tamaño de las letras*/
+    border-radius: 15px;/*redondeamos los bordes de los botones*/
+    cursor: pointer; /*modificamos el cursor*/
+    text-align: center; /*centramos el texto en el boton*/
+    font-family: fantasy; /* le ponemos ademas un tipografia diferente*/
+}
+/*ahora le damos estilos a la nuestra linea negra que queremos que separe los botones*/
+.seccionIzq hr {
+    width: 100%; /*le decimos que ocupe el ancho que tiene disponible*/
+    height: 10px;/*pero que tenga solo 10 px de alto*/
+    background-color: #040303; /*que sea negra*/
+    margin: 30px 0px; /*ponemos un margen arriba y abajo*/
+}
+/*en la seccion derecha ubicamos la imagen y ahora la vamos a pocisionar*/
+.seccionDerecha {
+    display: flex; /*convertimos el contenedor en un  contenedor flexible*/
+    flex: 1; /*le damos a flex un valor de 1 para que esta sección ocupe la misma cantidad de espacio
+             horizontal que la sección izq*/
+    justify-content: center;
+    align-items: center;
+}
+/*establecemos el alto y ancho de la imagen para que ocupe el 100% del espacio que tiene disponible*/
+.seccionDerecha img{
+    width: 100%; /*por eso lo ponemos em porcentajes y no en pixeles*/
+    height:100%;
+}
+/*Una vez finalazada la seccion del main vamos a pasar a armar la seccion de las indicaciones utiles 
+para nuestros usuarioa, perimero le damos estilo a toda la seccion completa*/
+
+.seccionIndicaciones{
+    display: flex; /*convertimos el contenedor en un  contenedor flexible*/
+    justify-content: space-around; /*le decimos que los elementos dentro de el deben ocupar el mismo espacio
+     entre ellos para posicionar nuestras card horizontalmente*/
+    align-items: center; /*centramos los elementos*/
+    background-color: #f3e4ca; /*y le ponemos un color cremita como fongo*/
+}
+/*como queremos que las imagenes tengan un cuadro redondeado y un fondo rojo vamos a establecer*/
+.card-img-top {
+    border-radius: 50%;  /*con esta propiedad que la imagen sea redonda*/
+    border: 5px solid #040303 ; /*que tiene un borde solido de 5 px de color negro*/
+    background-color: #e43f25; /*y un fondo rojo*/ 
+}
+
+/*Ahora bien como queremos que el texto tenga un borde cuadrado y que el titulo se picisione encima de este 
+vamos a llamar la class*/
+.card-body {
+    width: 100%;     /*ajustamos el ancho primero*/
+    height: 250px; /*y el alto*/
+    margin-top: 50px; /*y le decimos que debe estar 50 px por debajo del borde de la imagen para separarlos*/
+    padding: 10px; /*le ponemos un poco de relleno para que los elementos se separen del borde*/
+    border: 2px solid #040303; /* definimos un borde cudradado negro de 2 px*/
+    background-color: #f3e4ca; /* con el fondo bage */
+    position: relative; /* y le decimos que queremos que nuestro titulo ocupe una pisicion relativa de esta
+    forma logramos que se pocisione sobre el borde*/
+}
+/*para lograr eso llamamos a la class del titulo que es la predeterminada por bootstrap y la modificamos a nuestro gusto*/
+.card-title {
+    position: absolute; /*es que ocupe todo el espacio disponible y luego ajustamos su pocision*/
+    white-space: nowrap; /*asi evitamos un salto de linea*/
+    font-size: 28px; /*establecemos el tamaño de  las letras de nuestro titulo*/
+    color: #040303; /*y el color que queremos que tenga*/
+    top: -10px; /* ponemos en negativo porque lo queremos desplazar hacia arriba */
+    left: 50%; /* ponemos un left al 50*/
+    transform: translateX(-50%); /*  y ahora desplazamos el título hacia la izquierda en la mitad de su propio ancho*/
+    background-color: #f3e4ca; /* le ponemos el color de fondo */
+    padding: 0 10px; /*un poco de relleno y listo nuestro titulo*/
+    font-family: fantasy; /*definimos la fuente*/
+}
+/*definimos lo estilos de de nuestro parrafo dentro de la card*/
+.card-text{
+    font-size: 32px; /*le damos un tamaños de 32 px a las letras*/
+    text-align: center;/*centramos el texto*/
+    margin-top: 15px; /*y le ponemos margen arriba para que baje un poco el texto y no se superponga con el titulo*/
+    color: #48332b; /*con un toque de color y ya tenemos lista nuestra card*/
+}
+/*como ya tenemos casi toda la seccion armada solo nos falta darle estilos al footer que es el pie de pagina*/
+/*llamamos el elemento footer donde vamos a definir el pocisionamiento de mis elementos usando flexbox
+y de paso centramos el logo bien arriba en el medio y para eso definimos los siguiente valores:*/
+footer {
+    display: flex; /*lo convertimos en un contenedor flexible*/
+    flex-direction: column; /*le decimos que queremos los elementos en columnas*/
+    background-color: #040303; /* el fondo negro */
+    padding: 20px; /*un relleno */
+    width: 100%; /*le decimos que ocupe todo el espacio que tiene disponible*/
+    height: auto;  /*ajustamos la altura*/
+    border-top: 20px solid #f3e4ca ;/* y le ponemos un border top para separarlo de las card un poco */
+    align-items: center; /*centramos los elementos*/
+    text-align: center;  /*y el texto*/
+}
+
+.parrafooter {  /*vamos ahora con el texto del link de las bases y condiciones*/
+    display: flex; /*contenedor flexible*/
+    flex: 1;/*nos aseguramos que ocupe el mismo espacio que el contendor de los logos de redes*/
+    justify-content: flex-start; /*y lo ubicamos en el inicio*/ 
+    align-items: center; /*bien centrado*/ 
+    width: 100%; /*ocupando todo el ancho disponible*/
+}
+.titfooter{
+    text-decoration: none; /* y eliminamos el subrayado del enlace*/
+    margin: 0px 0px 15px 100px; /*agregamos un margen recuerden que los valores van arriba, derecha, abajo, izq*/
+    color: #f23f26; /*y le ponemos un poco de color*/
+}
+/*y le ponemos un hover para que cambie de color cuando el usuario apoya el mause*/
+.titfooter:hover {
+    color: #f3e4ca;
+}
+
+.iconoredes { /* definimos las propiedades deldiv donde stan mis inconos lo mismo que antes*/
+    display: flex; /*contenedor flexible*/
+    justify-content: flex-end; /*lo ubicamos al final del contendor*/
+    align-items: center; /*centros dentro de este*/
+    margin: 0px 0px 15px 500px; /*ajustamos los margenes */
+}
+
+.imgredes{ /*ahora vamos con la imagen de los iconos*/
+    width: 100px; /*ajustamos el ancho */
+    height: auto; /*el alto */
+    padding: 20px;/*un poco de relleno*/
+    margin: 0 5px; /* le ponemos un poco de espacio  entre los íconos */
+    text-decoration: none; /* eliminamos el subrayado del enlace*/
+}
+
+/*por ultimo le damos estilo al copyraight*/
+.copyfooter {
+    font-size: 14px;/*ajustamos el tamaño de la letras*/
+    width: 100%;/*le de cimos que ocupe todo el ancho disponible*/
+    color: #f23f26;/*le damos color a las letras y tenemos terminado nuestro copy*/
+}
+
+/*vamos a darles estilos a nuestro form de inicio de sesion y como solo podemos usar un archivo html
+lo vamos a ejecutar mediante js, para que cuando el usuario haga click en el boton aparezca el form
+y para que vaya con el estilo de la seccion main le vamos cambiar el color de fondoa negro, y de las letras a rojo*/
+
+.form {
+    width: 100%; /*le decimos que ocupe todo el ancho disponible*/
+    height: 500px;/*le damos un alto al form*/
+    top: -90px;/*le damos un top negativo para que cuando el form se abra tape el boton de inicio de sesion*/
+    margin: 0 auto;/*le damos un margen*/
+    padding: 20px;/*lo rellenamos un poquito*/
+    border: 2px solid #e43f25; /*un borde negro para que se le haga el marquito*/
+    border-radius: 5px; /*lo semiredondeamos ese borde*/
+    background-color: #040303;/*le ponemos un color de fondo*/
+    position: relative; /*y este valor esta añadido para posicionar el título que va a ir superpuesto sobre el borde*/
+}
+
+.titleForm { /* y ahora vamos a darle estilos al titulo h6 que va superpuesto sobre el borde*/
+    position: absolute; /*esto nos va a permitir pocisionarlo sobre el borde*/
+    top: -15px; /*le damos un top negativo para que se superponga con el borde*/
+    left: 5%; /*lo desplazamos levemente a la derecha*/
+    padding: 5px;/*le agregamos relleno para que no quede muy pegado al borde*/
+    margin: 0px;/*eliminamos margenes*/
+    background-color: #040303; /*le damos un color de fondo */
+    font-size: 20px;/*ajustamos el tamaño de las letras*/
+    color: #f23f26; /*le damos color a las letras*/
+    border: 2px solid #e43f25;/*le agregamos un borde al titulo*/
+    white-space: nowrap;/*le decimos que no queremos salto de linea en nuestro titulo*/
+    font-family: fantasy;/*y le ponemos la tipografia que venimos usando hasta ahora*/
+}
+
+.form  h2 { /*le damos estilo al titulo de inicio de sesion que esta dentro de nuestro formulario*/
+    text-align: center;/*pocisionamos el texto en el centro*/
+    padding-top: 50px;/*bajamos el titulo*/
+    margin-bottom: 15px;/*le ponemos un margen inferior para separarlo de las indicaciones de logueo*/
+    font-size: 30px; /*ajustamos el tamaño de las letras*/
+    font-family: fantasy;/*ponemos la misma tipografia*/
+    color: #f23f26;/*y le ponemos el color que queramos yo vengo usando el mismo negro pero ustedes pueden usar el
+                      que quieran*/
+    text-decoration: underline;  /*y le agragamos un subrayado*/                
+}
+
+.form label { /*le damos estilos a las indicaciones de nuestro form que estan en la etiqueta label*/
+    padding-top: 20px; /*le ponemos relleno arriba para bajarlo un poco*/
+    display: block; /*generamos un elemento de bloque*/
+    margin-bottom: 10px;/*ponemos un margen inferior*/
+    text-align: center;/*centramos el texto*/
+    font-family: fantasy;/*aplicamos la tipografia que usamos para el parrafo de la seccion inicial*/
+    color: #e43f25;/*le cambiamos el color a las letras*/
+}
+
+/*hasta aca venimos dandole estilos a nuestra pagina llamandoa la clase o bien al elemento o ambos juntos*/
+/*ahora como queremos personalizar aun mas nuestro form lo que vamos a hacer es llamar al type email y password
+y para eso vamos a usar los corchetes []que se usan como selectores de atributos para 
+seleccionar elementos que tienen  atributos con valores específicos, permitiendonos asi ponerle los estilos que 
+nosostros queremos*/
+.form input[type="email"],
+.form input[type="password"] {
+    justify-content: center;/*centramos el contenedor*/
+    align-items:center;/*los elementos*/
+    text-align: center;/*y el texto tambien lo ubicamos en el centro*/
+    font-size: 20px;/*definimos el tamaño de las letras*/
+    width: 100%; /*le decimos que ocupe todo el ancho disponible*/
+    padding: 10px;/*le ponemos un pooc de relleno*/
+    margin-bottom: 15px;/*un margen inferior*/
+    border-radius: 5px; /*redondeamos un poco el borde*/
+    background-color: #f3e4ca;/*le agregamos un color de fondo*/
+   
+}
+/*llamamos de la misma forma al boton de ingresar*/
+.form input[type="submit"] {
+    justify-content: center; /*centramos el contendor*/
+    align-items: center;/*y los elementos*/
+    text-align: center;/*centramos el texto*/
+    background-color: #e43f25;/*definimos el color de fondo*/
+    color: #040303;/*el color de las letras*/
+    padding: 10px 20px;/*le agregamos relleno*/
+    border: 2px solid #e43f25; /*le agregamos un borde*/
+    border-radius: 5px;/*lo redondeamos*/
+    width: 300px; /*le damos un ancho*/
+    cursor: pointer; /*ademas cambiamos la froma del cursor cuando pase o se pose sobre el boton*/
+    font-family: fantasy; /*definimo la fuente de las letras*/
+    font-size: 30px;/*y su tamaño*/
+    transform: translateX(50%); /*  y ahora desplazamos el boton hacia la derechaa a la mitad de su propio ancho*/
+}
+
+/*y para finalizar definimos el estilo del enlace de reseteo de clave*/
+.resetear-clave {
+    display: block; /* Hacemos que el enlace ocupe todo el ancho disponible */
+    text-align: center; /* centramos el texto del enlace */
+    text-decoration: none; /* eliminamos el subrayado */
+    color: #f23f26; /*cambiamos el color de las letras */
+    margin-top: 15px; /* añadimos un pequeño margen arriba para separar del elemento anterior */
+}
+
+/* Estilos base */
+/* ... (tu CSS actual) ... */
+
+/* @media para pantallas de hasta 240px (dispositivos pequeños) */
+@media (max-width: 240px) {
+    /* Header */
+    header {
+      padding: 10px 15px;
+    }
+    .logo {
+      width: 60px;
+    }
+    /* Main */
+    main {
+      padding: 10px 15px;
+    }
+    h1 {
+      font-size: 20px;
+    }
+    .seccionIzqP {
+      font-size: 16px;
+    }
+    .buttoninisesion, .buttonregistrarse {
+      font-size: 16px;
+    }
+    /* Footer */
+    footer {
+      padding: 10px 15px;
+    }
+    .titfooter {
+      font-size: 12px;
+    }
+    .iconoredes {
+      margin: 0;
+    }
+    .imgredes {
+      width: 40px;
+      padding: 5px;
+    }
+    .copyfooter {
+      font-size: 12px;
+    }
+  }
+  
+  /* @media para pantallas de 241px a 400px (dispositivos móviles) */
+  @media (min-width: 241px) and (max-width: 400px) {
+    /* Header */
+    header {
+      padding: 15px 20px;
+    }
+    .logo {
+      width: 80px;
+    }
+    /* Main */
+    main {
+      padding: 15px 20px;
+    }
+    h1 {
+      font-size: 24px;
+    }
+    .seccionIzqP {
+      font-size: 18px;
+    }
+    .buttoninisesion, .buttonregistrarse {
+      font-size: 18px;
+    }
+    /* Footer */
+    footer {
+      padding: 15px 20px;
+    }
+    .titfooter {
+      font-size: 16px;
+    }
+    .iconoredes {
+      margin: 0;
+    }
+    .imgredes {
+      width: 60px;
+      padding: 10px;
+    }
+    .copyfooter {
+      font-size: 16px;
+    }
+  }
+  
+  /* @media para pantallas de 401px a 640px (tabletas y dispositivos móviles) */
+  @media (min-width: 401px) and (max-width: 640px) {
+    /* Header */
+    header {
+      padding: 20px 30px;
+    }
+    .logo {
+      width: 100px;
+    }
+    /* Main */
+    main {
+      padding: 20px 30px;
+    }
+    h1 {
+      font-size: 28px;
+    }
+    .seccionIzqP {
+      font-size: 22px;
+    }
+    .buttoninisesion, .buttonregistrarse {
+      font-size: 22px;
+    }
+    /* Footer */
+    footer {
+      padding: 20px 30px;
+    }
+    .titfooter {
+      font-size: 20px;
+    }
+    .iconoredes {
+      margin: 0;
+    }
+    .imgredes {
+      width: 80px;
+      padding: 15px;
+    }
+    .copyfooter {
+      font-size: 18px;
+    }
+  }
+  
+  /* @media para pantallas de 641px a 800px (tabletas y pequeñas laptops) */
+  @media (min-width: 641px) and (max-width: 800px) {
+    /* Header */
+    header {
+      padding: 30px 40px;
+    }
+    .logo {
+      width: 120px;
+    }
+    /* Main */
+    main {
+      padding: 30px 40px;
+    }
+    h1 {
+      font-size: 32px;
+    }
+    .seccionIzqP {
+      font-size: 26px;
+    }
+    .buttoninisesion, .buttonregistrarse {
+      font-size: 26px;
+    }
+    /* Footer */
+    footer {
+      padding: 30px 40px;
+    }
+    .titfooter {
+      font-size: 24px;
+    }
+    .iconoredes {
+      margin-right: 0;
+    }
+    .imgredes {
+      width: 100px;
+      padding: 20px;
+    }
+    .copyfooter {
+      font-size: 22px;
+    }
+  }
+  
+  /* Más consultas @media para tamaños mayores si es necesario */
+  
+   
+
