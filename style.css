@@ -331,32 +331,40 @@ nosostros queremos*/
     }
     /* Main */
     main {
+      width: 100%;
       padding: 10px 15px;
     }
     h1 {
+      width: 100%;
       font-size: 20px;
     }
     .seccionIzqP {
+      width: 100%;
       font-size: 16px;
     }
     .buttoninisesion, .buttonregistrarse {
       font-size: 16px;
+      width: 100%;
     }
     /* Footer */
     footer {
+      width: 100%;
       padding: 10px 15px;
     }
     .titfooter {
+      width: 100%;
       font-size: 12px;
     }
     .iconoredes {
+      width: 100%;
       margin: 0;
     }
     .imgredes {
-      width: 40px;
+      width: 100%;
       padding: 5px;
     }
     .copyfooter {
+      width: 100%;
       font-size: 12px;
     }
   }
@@ -365,39 +373,49 @@ nosostros queremos*/
   @media (min-width: 241px) and (max-width: 400px) {
     /* Header */
     header {
+      width: 100%;
       padding: 15px 20px;
     }
     .logo {
+      width: 100%;
       width: 80px;
     }
     /* Main */
     main {
+      width: 100%;
       padding: 15px 20px;
     }
     h1 {
+      width: 100%;
       font-size: 24px;
     }
     .seccionIzqP {
+      width: 100%;
       font-size: 18px;
     }
     .buttoninisesion, .buttonregistrarse {
+      width: 100%;
       font-size: 18px;
     }
     /* Footer */
     footer {
+      width: 100%;
       padding: 15px 20px;
     }
     .titfooter {
+      width: 100%;
       font-size: 16px;
     }
     .iconoredes {
+      width: 100%;
       margin: 0;
     }
     .imgredes {
-      width: 60px;
+      width: 100%;
       padding: 10px;
     }
     .copyfooter {
+      width: 100%;
       font-size: 16px;
     }
   }
@@ -406,39 +424,47 @@ nosostros queremos*/
   @media (min-width: 401px) and (max-width: 640px) {
     /* Header */
     header {
+      width: 100%;
       padding: 20px 30px;
     }
     .logo {
-      width: 100px;
-    }
+      width: 100%;    }
     /* Main */
     main {
+      width: 100%;
       padding: 20px 30px;
     }
-    h1 {
+    .container{
+      width: 100%;
       font-size: 28px;
     }
     .seccionIzqP {
+      width: 100%;
       font-size: 22px;
     }
     .buttoninisesion, .buttonregistrarse {
+      width: 100%;
       font-size: 22px;
     }
     /* Footer */
     footer {
+      width: 100%;
       padding: 20px 30px;
     }
     .titfooter {
       font-size: 20px;
     }
     .iconoredes {
+      width: 100%;
       margin: 0;
     }
     .imgredes {
+      width: 100%;
       width: 80px;
       padding: 15px;
     }
     .copyfooter {
+      width: 100%;
       font-size: 18px;
     }
   }
