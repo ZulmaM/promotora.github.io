@@ -172,6 +172,7 @@ vamos a llamar la class*/
 /*como ya tenemos casi toda la seccion armada solo nos falta darle estilos al footer que es el pie de pagina*/
 /*llamamos el elemento footer donde vamos a definir el pocisionamiento de mis elementos usando flexbox
 y de paso centramos el logo bien arriba en el medio y para eso definimos los siguiente valores:*/
+
 footer {
     display: flex; /*lo convertimos en un contenedor flexible*/
     flex-direction: column; /*le decimos que queremos los elementos en columnas*/
@@ -316,201 +317,57 @@ nosostros queremos*/
     color: #f23f26; /*cambiamos el color de las letras */
     margin-top: 15px; /* añadimos un pequeño margen arriba para separar del elemento anterior */
 }
+/*ya tenemos definido todos lo estilos para el formato de escritorio ahora usando @media vamos a convertir
+en responsive algunas secciones de nuestra pagina salvo las card que lo vamos a hacer con bootstrap*/
+/*empezamos*/
+/* ponemos @media para pantallas de 240px a 400px (celulares) */
+@media (min-width: 240px) and (max-width: 400px) {
+  header {
+    padding: 10px; /* Ajustamos el relleno para dispositivos más pequeños */
+  }
 
-/* Estilos base */
-/* ... (tu CSS actual) ... */
+  .logo,
+  .logoinisesion {
+    width: 60px; /* Redefinimos el ancho de los logos para que se ajusten al espacio disponible */
+  }
+}
+  /* Ajustes para elementos del main */
+  main {
+    padding: 20px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  .seccionIzqP {
+    font-size: 22px;
+  }
+  /* Ajustes para elementos del footer */
+  footer {
+    padding: 20px;
+  }
+  .titfooter {
+    font-size: 20px;
+  }
+  .iconoredes {
+    margin-right: 0;
+  }
+  .imgredes {
+    width: 100px;
+    padding: 20px;
+  }
+  .copyfooter {
+    font-size: 18px;
+  }
 
-/* @media para pantallas de hasta 240px (dispositivos pequeños) */
-@media (max-width: 240px) {
-    /* Header */
-    header {
-      padding: 10px 15px;
-    }
-    .logo {
-      width: 60px;
-    }
-    /* Main */
-    main {
-      width: 100%;
-      padding: 10px 15px;
-    }
-    h1 {
-      width: 100%;
-      font-size: 20px;
-    }
-    .seccionIzqP {
-      width: 100%;
-      font-size: 16px;
-    }
-    .buttoninisesion, .buttonregistrarse {
-      font-size: 16px;
-      width: 100%;
-    }
-    /* Footer */
-    footer {
-      width: 100%;
-      padding: 10px 15px;
-    }
-    .titfooter {
-      width: 100%;
-      font-size: 12px;
-    }
-    .iconoredes {
-      width: 100%;
-      margin: 0;
-    }
-    .imgredes {
-      width: 100%;
-      padding: 5px;
-    }
-    .copyfooter {
-      width: 100%;
-      font-size: 12px;
-    }
-  }
-  
-  /* @media para pantallas de 241px a 400px (dispositivos móviles) */
-  @media (min-width: 241px) and (max-width: 400px) {
-    /* Header */
-    header {
-      width: 100%;
-      padding: 15px 20px;
-    }
-    .logo {
-      width: 100%;
-      width: 80px;
-    }
-    /* Main */
-    main {
-      width: 100%;
-      padding: 15px 20px;
-    }
-    h1 {
-      width: 100%;
-      font-size: 24px;
-    }
-    .seccionIzqP {
-      width: 100%;
-      font-size: 18px;
-    }
-    .buttoninisesion, .buttonregistrarse {
-      width: 100%;
-      font-size: 18px;
-    }
-    /* Footer */
-    footer {
-      width: 100%;
-      padding: 15px 20px;
-    }
-    .titfooter {
-      width: 100%;
-      font-size: 16px;
-    }
-    .iconoredes {
-      width: 100%;
-      margin: 0;
-    }
-    .imgredes {
-      width: 100%;
-      padding: 10px;
-    }
-    .copyfooter {
-      width: 100%;
-      font-size: 16px;
-    }
-  }
-  
-  /* @media para pantallas de 401px a 640px (tabletas y dispositivos móviles) */
-  @media (min-width: 401px) and (max-width: 640px) {
-    /* Header */
-    header {
-      width: 100%;
-      padding: 20px 30px;
-    }
-    .logo {
-      width: 100%;    }
-    /* Main */
-    main {
-      width: 100%;
-      padding: 20px 30px;
-    }
-    .container{
-      width: 100%;
-      font-size: 28px;
-    }
-    .seccionIzqP {
-      width: 100%;
-      font-size: 22px;
-    }
-    .buttoninisesion, .buttonregistrarse {
-      width: 100%;
-      font-size: 22px;
-    }
-    /* Footer */
-    footer {
-      width: 100%;
-      padding: 20px 30px;
-    }
-    .titfooter {
-      font-size: 20px;
-    }
-    .iconoredes {
-      width: 100%;
-      margin: 0;
-    }
-    .imgredes {
-      width: 100%;
-      width: 80px;
-      padding: 15px;
-    }
-    .copyfooter {
-      width: 100%;
-      font-size: 18px;
-    }
-  }
-  
-  /* @media para pantallas de 641px a 800px (tabletas y pequeñas laptops) */
-  @media (min-width: 641px) and (max-width: 800px) {
-    /* Header */
-    header {
-      padding: 30px 40px;
-    }
-    .logo {
-      width: 120px;
-    }
-    /* Main */
-    main {
-      padding: 30px 40px;
-    }
-    h1 {
-      font-size: 32px;
-    }
-    .seccionIzqP {
-      font-size: 26px;
-    }
-    .buttoninisesion, .buttonregistrarse {
-      font-size: 26px;
-    }
-    /* Footer */
-    footer {
-      padding: 30px 40px;
-    }
-    .titfooter {
-      font-size: 24px;
-    }
-    .iconoredes {
-      margin-right: 0;
-    }
-    .imgredes {
-      width: 100px;
-      padding: 20px;
-    }
-    .copyfooter {
-      font-size: 22px;
-    }
-  }
-  
-  /* Más consultas @media para tamaños mayores si es necesario */
-  
-   
 
+/* @media para pantallas de 401px a 640px (tabletas y dispositivos móviles) */
+@media (min-width: 401px) and (max-width: 640px) {
+  /* Ajustes de estilos para tabletas y dispositivos móviles */
+}
+
+/* @media para pantallas de 641px a 800px (tabletas y pequeñas laptops) */
+@media (min-width: 641px) and (max-width: 800px) {
+  /* Ajustes de estilos para tablets y pequeñas laptops */
+}
+
+/* Más consultas @media para tamaños mayores si es necesario */
