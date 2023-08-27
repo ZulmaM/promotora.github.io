@@ -332,8 +332,8 @@ en responsive algunas secciones de nuestra pagina salvo las card que lo vamos a 
   }
 
   h1 { /*luego ajustamos el titulo de nuestra pagina*/
-    font-size: 20px; /* ajustamos el tamaño de las letras*/
-    padding: 8px; /* el relleno */
+    font-size: 15px; /* ajustamos el tamaño de las letras*/
+    padding: 2px; /* el relleno */
     text-indent: 10px; /* ajustamos la indentación del texto */
     margin: 8px 0; /* y el margen esto recuerden es para que se vea bien en dispositivos celulares*/
 }
