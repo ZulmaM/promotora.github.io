@@ -335,6 +335,7 @@ en responsive algunas secciones de nuestra pagina salvo las card que lo vamos a 
     font-size: 15px; /* ajustamos el tamaño de las letras*/
     padding: 2px; /* el relleno */
     text-indent: 10px; /* ajustamos la indentación del texto */
+    white-space: nowrap;/*le decimos que no queremos salto de linea en nuestro titulo*/
     margin: 8px 0; /* y el margen esto recuerden es para que se vea bien en dispositivos celulares*/
 }
 }
