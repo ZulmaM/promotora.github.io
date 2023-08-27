@@ -322,43 +322,23 @@ en responsive algunas secciones de nuestra pagina salvo las card que lo vamos a 
 /*empezamos*/
 /* ponemos @media para pantallas de 240px a 400px (celulares) */
 @media (min-width: 240px) and (max-width: 400px) {
-  header {
-    padding: 10px; /* Ajustamos el relleno para dispositivos más pequeños */
+  header { /*llamamos a nuestro primer elemento que es el header*/
+    padding: 10px; /* ajustamos el relleno */
   }
 
   .logo,
-  .logoinisesion {
-    width: 60px; /* Redefinimos el ancho de los logos para que se ajusten al espacio disponible */
-  }
-}
-  /* Ajustes para elementos del main */
-  main {
-    padding: 20px;
-  }
-  h1 {
-    font-size: 28px;
-  }
-  .seccionIzqP {
-    font-size: 22px;
-  }
-  /* Ajustes para elementos del footer */
-  footer {
-    padding: 20px;
-  }
-  .titfooter {
-    font-size: 20px;
-  }
-  .iconoredes {
-    margin-right: 0;
-  }
-  .imgredes {
-    width: 100px;
-    padding: 20px;
-  }
-  .copyfooter {
-    font-size: 18px;
+  .logoinisesion { /*luego llamamos a nuestros logos del header*/
+    width: 60px; /* y redefinimos su ancho para que se ajusten al espacio disponible */
   }
 
+  h1 { /*luego ajustamos el titulo de nuestra pagina*/
+    font-size: 20px; /* ajustamos el tamaño de las letras*/
+    padding: 8px; /* el relleno */
+    text-indent: 10px; /* ajustamos la indentación del texto */
+    margin: 8px 0; /* y el margen esto recuerden es para que se vea bien en dispositivos celulares*/
+}
+}
+ 
 
 /* @media para pantallas de 401px a 640px (tabletas y dispositivos móviles) */
 @media (min-width: 401px) and (max-width: 640px) {
