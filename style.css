@@ -141,8 +141,13 @@ para nuestros usuarioa, perimero le damos estilo a toda la seccion completa*/
 
 
 
-/*como queremos que las imagenes tengan un cuadro redondeado y un fondo rojo vamos a establecer*/
+/*llamamos al contenedor principal y le decimos*/
+.justify-content-around{
+  justify-content: space-around; /*hasya el mismo espacio entre todos los elementos*/
+  width: 100%;/*y que ocupen el 100% del ancho disponible*/
+}
 
+/*como queremos que las imagenes tengan un cuadro redondeado y un fondo rojo vamos a establecer*/
 .card-img-top {
   width: 100%; /*hacemos que ocupe todo el ancho disponible*/
   height: auto; /*y que el alto sea automatico*/

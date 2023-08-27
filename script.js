@@ -23,4 +23,13 @@ ButtonIniciar.addEventListener("click", function() {
     }
 });
 
+//y hacemos la misma declaracion para la funcion onclick en nuestro logo de inicio del header
+function mostrarFormularioDesdeLogo() {
+    if (loginForm.style.display === "none") {
+      loginForm.style.display = "block";
+    } else {
+      loginForm.style.display = "none";
+    }
+  }
+
 
