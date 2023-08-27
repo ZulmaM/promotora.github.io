@@ -326,9 +326,11 @@ en responsive algunas secciones de nuestra pagina salvo las card que lo vamos a 
     padding: 10px; /* ajustamos el relleno */
   }
 
-  .logo,
-  .logoinisesion { /*luego llamamos a nuestros logos del header*/
-    width: 60px; /* y redefinimos su ancho para que se ajusten al espacio disponible */
+  .logo{ /*luego llamamos a nuestros logos del header*/
+    width: 80px; /* y redefinimos su ancho para que se ajusten al espacio disponible */
+  }
+  .logoinisesion{
+    width: 50px;
   }
 
   h1 { /*luego ajustamos el titulo de nuestra pagina*/
@@ -336,7 +338,28 @@ en responsive algunas secciones de nuestra pagina salvo las card que lo vamos a 
     padding: 2px; /* el relleno */
     text-indent: 10px; /* ajustamos la indentación del texto */
     white-space: nowrap;/*le decimos que no queremos salto de linea en nuestro titulo*/
-    margin: 8px 0; /* y el margen esto recuerden es para que se vea bien en dispositivos celulares*/
+    margin: 2px 0; /* y el margen esto recuerden es para que se vea bien en dispositivos celulares*/
+}
+main {
+  flex-direction: column; /* Cambiamos la dirección del flex para apilar verticalmente */
+  justify-content: center;
+  align-items: center;
+}
+
+.seccionIzq {
+  padding: 10px; /* Ajustamos el relleno para dispositivos más pequeños */
+}
+.seccionIzqP{
+  font-size: 15px;
+}
+.buttoninisesion,
+.buttonregistrarse {
+  font-size: 20px; /* Ajustamos el tamaño de fuente de los botones */
+}
+
+/* Ocultamos la sección derecha */
+.seccionDerecha {
+  display: none;
 }
 }
  
