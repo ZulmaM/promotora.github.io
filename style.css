@@ -195,6 +195,7 @@ vamos a llamar la class*/
 
 .seccionIndicaciones{
   display: flex; /*convertimos el contenedor en un  contenedor flexible*/
+  width: 100%;/*que ocupe todo el ancho dispinible*/
   justify-content: space-around; /*le decimos que los elementos dentro de el deben ocupar el mismo espacio
    entre ellos para posicionar nuestras card horizontalmente*/
   align-items: center; /*centramos los elementos*/
