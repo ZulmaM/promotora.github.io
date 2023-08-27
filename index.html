@@ -22,10 +22,11 @@ el comentario y abajo el ejemplo implementado en codigo-->
     del navegador o en los resultados de búsqueda y debajo de este dentro de la etiqueta <link>
     podemos definir una imagen para que aparezca como icono junto al titulo de nuestro sitio web, para eso
     vamos a usar el atributo rel="icon" para que se muestre como icono, un hrf donde 
-    colocamos al ruta relativa de la imagen que queremos poner y el atributo type nos sirve 
+    colocamos al ruta relativa teniendo en cuenta que esta en otra carpeta por fuera de mi index primero llamo
+    la carpeta y seguido de / selecciono de la imagen que queremos poner y el atributo type nos sirve 
     para especificar el tipo de archivo que estás vinculando en este caso una imagen en formato png-->
     <title>Reaper gaming squad</title>
-    <link rel="icon" href="1-logo-blanco.png" type="image/png">
+    <link rel="icon" href="img/1-logo-blanco.png" type="image/png">
 </head>
 <body>
     <!--Ahora bien dentro del <body> lo primero que vamos a hacer es definir la etiqueta semantica <header>
@@ -34,8 +35,8 @@ el comentario y abajo el ejemplo implementado en codigo-->
         vamos a vinular con nuestro form y para poder pocisionarlo correctamente con css vamos a declararle
         una class diferente  a cada uno y un id unico para clonar y reutilizar el codigo mediante js-->
     <header id="header">
-        <img class="logo" src="1-logo-blanco.png" alt="Logo del sitio">
-        <img  class="logoinisesion" src="acceso.png" alt="Logo de inicio de sesión">
+        <img class="logo" src="img/1-logo-blanco.png" alt="Logo del sitio">
+        <img  class="logoinisesion" src="img/acceso.png" alt="Logo de inicio de sesión">
     </header>
     <!--Una vez que tenemos definido nuestro header ya con todos los detalles en css vamos a ponerle un
     titulo principal a nuestra pagina y para eso usamos la etiqueta <h1>-->
@@ -87,41 +88,59 @@ el comentario y abajo el ejemplo implementado en codigo-->
         <button class="buttonregistrarse">REGISTRARSE</button>
         </div>
         <div class="seccionDerecha">
-            <img src="6-logo-color.png" alt="logo de la pagina en grande">
+            <img src="img/6-logo-color.png" alt="logo de la pagina en grande">
         </div>
     </main>
     <!--Una vez que terminamos de definir el main pasamos nuestra seccion de informacion util para el cliente
     donde vamos a crear unas card con la imagen redondeada para eso nos vamos a ayudar con bootstrap que tiene unas
     card predefinidas,pero obviamente le vamos a dar nuestro propio estilo reutilizando las clases predefinidas por
     bootstrap -->
-    <section class="seccionIndicaciones">
-        <!--para lograr que la imgen sea redondeada vamos a definir un estilo directamente en el elemento 
-        para facilitarnos el trabajo y los demas estilos si se lo damos en la hoja de css, creamo un div
-        contenedor para cada card dentro de este usamos un <h3> para definir el titulo de la seccion recuerden
-        que <h1> se recomienda usar solo 1 por hoja y un elemento <p> para añadir una pequeña descripcion-->
-        <div style="width: 18rem;">
-            <img src="6-logo-negro.png" class="card-img-top" alt="logo negro">
-            <div class="card-body">
-              <h3 class="card-title">¿Donde puedo ver?</h3>
-              <p class="card-text">desde tu dispositivo Celular, Tablet, Compu, TV</p>
-            </div>
-          </div>
-          <div style="width: 18rem;">
-            <img src="1-logo-blanco.png" class="card-img-top" alt="logo blanco">
-            <div class="card-body">
-              <h3 class="card-title">Descargar APP</h3>
-              <p class="card-text">Disponible para sistemas Android y iOS</p>
-            </div>
-          </div>
-          <div  style="width: 18rem;">
-            <img src="6-logo-color.png" class="card-img-top" alt=".logo color">
-            <div class="card-body">
-              <h3 class="card-title">Registrate hoy</h3>
-              <p class="card-text">solo dale click a registrarse completa tus datos y listo</p>
-            </div>
-          </div>
-    </section>
+    <!--para lograr que la imgen sea redondeada vamos a definir un estilo directamente en el elemento 
+    para facilitarnos el trabajo y los demas estilos si se lo damos en la hoja de css, creamo un div
+    contenedor para cada card dentro de este usamos un <h3> para definir el titulo de la seccion recuerden
+    que <h1> se recomienda usar solo 1 por hoja y un elemento <p> para añadir una pequeña descripcion, ademas de 
+    eso aprovechando las clases de bootstrap vamos a usar sus puntos de interrubcion- para hacer responsive 
+    nuestras card y estos puntos de corte son Punto de interrupción	infijo de clase	Dimensiones
+    Extra Pequeño xs	Ninguno	<576px
+    Pequeño	sm	≥576 píxeles
+    Medio	md	≥768 píxeles
+    Grande	lg	≥992px
+    Extra grande	xl	≥1200 píxeles
+    y lo aplicamos en nuestro codigo con la class col de column de la siguiente forma:
+     class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3"-->
 
+    <section class="seccionIndicaciones">
+        <div class="row justify-content-around">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
+            <div>
+                <img src="img/6-logo-negro.png" class="card-img-top" alt="logo negro">
+                <div class="card-body">
+                <h3 class="card-title">¿Dónde puedo ver?</h3>
+                <p class="card-text">Desde tu dispositivo Celular, Tablet, Compu, TV</p>
+                </div>
+            </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
+            <div>
+                <img src="img/1-logo-blanco.png" class="card-img-top" alt="logo blanco">
+                <div class="card-body">
+                <h3 class="card-title">Descargar APP</h3>
+                <p class="card-text">Disponible para sistemas Android y iOS</p>
+                </div>
+            </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
+            <div>
+                <img src="img/6-logo-color.png" class="card-img-top" alt=".logo color">
+                <div class="card-body">
+                <h3 class="card-title">Regístrate hoy</h3>
+                <p class="card-text">Solo dale click a registrarte, completa tus datos y listo</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>          
+              
       <!--Y llegamos al final de nuestra primer hoja html y es el momento del foooter, es decir el pie de pagina
     para eso llamamos a la etiqueta <footer> y dentro de esta armamaos cajitas con div contenedores,
     en el primero usando la etiqueta <img> ponemos el logo de nuestra pagina y creamos una class para darle
@@ -134,22 +153,22 @@ el comentario y abajo el ejemplo implementado en codigo-->
 </section>        
         <footer class="estiloFooter" id="footer">
             <div class="logofooter">
-                <img class="logo" src="1-logo-blanco.png" alt="Logo de la pagina" >
+                <img class="logo" src="img/1-logo-blanco.png" alt="Logo de la pagina" >
             </div>
             <div class="parrafooter">
                 <a class="titfooter" href=" link bases y condiciones"><h6>Leer bases y condiciones</h6></a>
                 <div class="iconoredes">
                     <a href="https://www.whatsapp.com/" >
-                        <img class="imgredes" src="whatsapp.png" alt="logo whatsapp">
+                        <img class="imgredes" src="img/whatsapp.png" alt="logo whatsapp">
                     </a>
                     <a href="https://www.twiter.com/" >
-                        <img class="imgredes" src="twiter.png" alt="logo twitter">
+                        <img class="imgredes" src="img/twiter.png" alt="logo twitter">
                     </a>
                     <a href="https://www.instagram.com/" >
-                        <img class="imgredes" src="instagram.png" alt="logo instagram">
+                        <img class="imgredes" src="img/instagram.png" alt="logo instagram">
                     </a>
                     <a href="https://www.facebook.com/" >
-                        <img class="imgredes" src="facebook.png" alt="logo facebook">
+                        <img class="imgredes" src="img/facebook.png" alt="logo facebook">
                     </a>
                 </div>
             </div>
