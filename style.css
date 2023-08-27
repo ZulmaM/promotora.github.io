@@ -11,7 +11,7 @@
                              con valor border-box le estamos diciendo que  el ancho y el alto del elemento
                              debe ocupar solo el relleno y el borde que yo defini para mi elemento*/
   }
-
+                   /*SECCION HEADER*/
  /* ahora lo siguiente que hacemos es definir los estilos para el HEADER primero*/
 
  header {
@@ -47,6 +47,8 @@ mis elementos*/
     cursor: pointer; /*y le decimos al cursor que cuando pase por encima de mi logo cambie de forma a una mano*/
 }
 
+                        /*SECCION TITULO PRINCIPAL*/
+
  /*ahora vamos a darle estilo al titulo principal de mi pagina*/
 
 h1{
@@ -60,6 +62,8 @@ h1{
     font-size: 28px; /*definimos el tamaño de las letras de nuestro h1*/
     font-family: fantasy; /*declaramos la fuente*/
 }
+
+              /*SECCION MAIN*/
 
 /*Luego vamos a darle amor a  la seccion main*/
 
@@ -136,6 +140,8 @@ y lo hacemos de la siguiente manera*/
     height:100%;
 }
 
+                  /*SECCION CARD DE INDICACIONES*/
+
 /*Una vez finalazada la seccion del main vamos a pasar a armar la seccion de las indicaciones utiles 
 para nuestros usuarioa, perimero le damos estilo a toda la seccion completa*/
 
@@ -145,6 +151,17 @@ para nuestros usuarioa, perimero le damos estilo a toda la seccion completa*/
 .justify-content-around{
   justify-content: space-around; /*hasya el mismo espacio entre todos los elementos*/
   width: 100%;/*y que ocupen el 100% del ancho disponible*/
+}
+
+.seccionIndicaciones{
+  display: flex; /*convertimos el contenedor en un  contenedor flexible*/
+  width: 100%;/*que ocupe todo el ancho dispinible*/
+  justify-content: space-around; /*le decimos que los elementos dentro de el deben ocupar el mismo espacio
+   entre ellos para posicionar nuestras card horizontalmente*/
+  align-items: center; /*centramos los elementos*/
+  background-color: #f3e4ca; /*y le ponemos un color cremita como fongo*/
+  margin: 0px;
+  padding: 30px;
 }
 
 /*como queremos que las imagenes tengan un cuadro redondeado y un fondo rojo vamos a establecer*/
@@ -198,16 +215,7 @@ vamos a llamar la class*/
     color: #48332b; /*con un toque de color y ya tenemos lista nuestra card*/
 }
 
-.seccionIndicaciones{
-  display: flex; /*convertimos el contenedor en un  contenedor flexible*/
-  width: 100%;/*que ocupe todo el ancho dispinible*/
-  justify-content: space-around; /*le decimos que los elementos dentro de el deben ocupar el mismo espacio
-   entre ellos para posicionar nuestras card horizontalmente*/
-  align-items: center; /*centramos los elementos*/
-  background-color: #f3e4ca; /*y le ponemos un color cremita como fongo*/
-  margin: 0px;
-  padding: 30px;
-}
+            /*SECCION FOOTER*/
 
 /*como ya tenemos casi toda la seccion armada solo nos falta darle estilos al footer que es el pie de pagina*/
 /*llamamos el elemento footer donde vamos a definir el pocisionamiento de mis elementos usando flexbox
@@ -272,6 +280,9 @@ footer {
 /*vamos a darles estilos a nuestro form de inicio de sesion y como solo podemos usar un archivo html
 lo vamos a ejecutar mediante js, para que cuando el usuario haga click en el boton aparezca el form
 y para que vaya con el estilo de la seccion main le vamos cambiar el color de fondoa negro, y de las letras a rojo*/
+
+
+                        /*SECCION FORMULARIO*/
 
 .form {
     width: 100%; /*le decimos que ocupe todo el ancho disponible*/
@@ -372,7 +383,9 @@ nosostros queremos*/
 en responsive algunas secciones de nuestra pagina salvo las card que lo vamos a hacer con bootstrap*/
 /*empezamos*/
 
-/* ponemos @media para pantallas de 240px a 400px (celulares) */
+                      /*SECCION MEDIA QUERIES*/
+
+/* ponemos @media queries para pantallas de 240px a 400px (celulares) */
 
 
 @media (min-width: 240px) and (max-width: 400px) {
@@ -601,7 +614,7 @@ footer {
   }
 }
 
-/*ahora vamos a definir los edia queries con los estilos para dispositivos mas grandes*/
+/* @media queries para pantallas de 641px a 800px con los estilos para dispositivos mas grandes*/
 
 @media (min-width: 641px) and (max-width: 800px) {
 
@@ -716,7 +729,7 @@ footer {
     font-size: 16px;/*y al copy solo le ajsutamos el tamaño de las letras*/
   }
 }
-/* Estilos para dispositivos con ancho de pantalla entre 801px y 1200px */
+/*@media queries para pantalla entre 801px y 1200px  */
 @media (min-width: 801px) and (max-width: 1200px) {
   header {
     width: 100%;
