@@ -3,6 +3,7 @@
 
   /*Lo primero que hacemos es resetear todos los estilos que ya viene por defecto en el navegador
   y para eso utilizamos las siguiente regla css*/
+
 *{
     margin: 0;  /* para eliminar cualquier espacio alrededor de mi elemento*/
     padding: 0; /* para eliminar el relleno entre mi elemento y su borde */
@@ -10,7 +11,9 @@
                              con valor border-box le estamos diciendo que  el ancho y el alto del elemento
                              debe ocupar solo el relleno y el borde que yo defini para mi elemento*/
   }
+
  /* ahora lo siguiente que hacemos es definir los estilos para el HEADER primero*/
+
  header {
     display: flex; /*utilizamos el modelo de diseño de flexbox y le decimos al header que  va a tener un
                     diseño flexible de esta manera*/
@@ -25,6 +28,7 @@
 }
 
 /* vamos a darle estilo al logo de nuestra pagina, para eso llamamos la class logo */
+
 .logo {
         display: inline-block; /*primero lo establecemos como un elemento de linea para poder declarar el alto
                             y ancho que queremos que tenga*/
@@ -34,6 +38,7 @@
 
 /* y seguimos con el logo de inicio de sesión par eso llamamos la class que corresponda y asi con todos
 mis elementos*/
+
 .logoinisesion {
     display: inline-block;/*primero lo establecemos como un elemento de linea para poder declarar el alto
                               y ancho que queremos que tenga*/
@@ -41,7 +46,9 @@ mis elementos*/
     height: auto;/*y el alto lo dejamos en auto porque solo ocupa el alto disponible del elemento header*/
     cursor: pointer; /*y le decimos al cursor que cuando pase por encima de mi logo cambie de forma a una mano*/
 }
+
  /*ahora vamos a darle estilo al titulo principal de mi pagina*/
+
 h1{
     color: #f23f26; /*las letras las queremos rojas*/
     background-color: #040303; /* y el fondo negro para un mejor contraste*/
@@ -55,6 +62,7 @@ h1{
 }
 
 /*Luego vamos a darle amor a  la seccion main*/
+
 main{
     display: flex; /*utilizamos el modelo de diseño de flexbox y le decimos al main que  va a tener un
     diseño flexible de esta manera*/
@@ -62,8 +70,16 @@ main{
           verticalmente */
     padding: 5px 5px 5px 50px; /* y le agregamos algo de relleno para que nuestros elementos no queden 
                   tan pegados al borde del header*/
-    background-color: #f3e4ca; /*y le ponemos un color cremita como fongo*/
+    background-color: #f3e4ca; /*y le ponemos un color cremita como fondo*/
                                                                                                                    }
+/*ahora le damos estilos a la nuestra linea negra que queremos que separe los botones*/
+
+.seccionIzq  hr {
+  width: 100%; /*le decimos que ocupe el ancho que tiene disponible*/
+  height: 10px;/*pero que tenga solo 10 px de alto*/
+  background-color: #040303 !important; /*que sea negra*/
+  margin: 30px 0px; /*ponemos un margen arriba y abajo*/
+}
 
 .seccionIzq {
     display: flex; /*convertimos el contenedor Izq en un contenedor flexible*/
@@ -76,6 +92,7 @@ main{
 
 /*Seguimos con el parrafo explicativo llamamos la  clase .seccionIzq  y el elemento p y con esto decimos 
 que le vamos a dar estilo al elemento p dentro de la seccionIzq*/
+
 .seccionIzqP {
     text-align: center; /*centramos el texto*/
     justify-content: start; /*lo pocisionamos al inicio del contenedor*/
@@ -87,6 +104,7 @@ que le vamos a dar estilo al elemento p dentro de la seccionIzq*/
 
 /* ahora vamos a darle estilos a nuestros botones y lo vamos a hacer llamando a los dos al mismo tiempo
 y lo hacemos de la siguiente manera*/
+
 .buttoninisesion,
 .buttonregistrarse {
     width: 100%; /*establecemos un ancho del 100% diponible*/
@@ -100,14 +118,9 @@ y lo hacemos de la siguiente manera*/
     text-align: center; /*centramos el texto en el boton*/
     font-family: fantasy; /* le ponemos ademas un tipografia diferente*/
 }
-/*ahora le damos estilos a la nuestra linea negra que queremos que separe los botones*/
-.seccionIzq hr {
-    width: 100%; /*le decimos que ocupe el ancho que tiene disponible*/
-    height: 10px;/*pero que tenga solo 10 px de alto*/
-    background-color: #040303; /*que sea negra*/
-    margin: 30px 0px; /*ponemos un margen arriba y abajo*/
-}
+
 /*en la seccion derecha ubicamos la imagen y ahora la vamos a pocisionar*/
+
 .seccionDerecha {
     display: flex; /*convertimos el contenedor en un  contenedor flexible*/
     flex: 1; /*le damos a flex un valor de 1 para que esta sección ocupe la misma cantidad de espacio
@@ -115,11 +128,14 @@ y lo hacemos de la siguiente manera*/
     justify-content: center;
     align-items: center;
 }
+
 /*establecemos el alto y ancho de la imagen para que ocupe el 100% del espacio que tiene disponible*/
+
 .seccionDerecha img{
     width: 100%; /*por eso lo ponemos em porcentajes y no en pixeles*/
     height:100%;
 }
+
 /*Una vez finalazada la seccion del main vamos a pasar a armar la seccion de las indicaciones utiles 
 para nuestros usuarioa, perimero le damos estilo a toda la seccion completa*/
 
@@ -130,7 +146,9 @@ para nuestros usuarioa, perimero le damos estilo a toda la seccion completa*/
     align-items: center; /*centramos los elementos*/
     background-color: #f3e4ca; /*y le ponemos un color cremita como fongo*/
 }
+
 /*como queremos que las imagenes tengan un cuadro redondeado y un fondo rojo vamos a establecer*/
+
 .card-img-top {
     border-radius: 50%;  /*con esta propiedad que la imagen sea redonda*/
     border: 5px solid #040303 ; /*que tiene un borde solido de 5 px de color negro*/
@@ -139,6 +157,7 @@ para nuestros usuarioa, perimero le damos estilo a toda la seccion completa*/
 
 /*Ahora bien como queremos que el texto tenga un borde cuadrado y que el titulo se picisione encima de este 
 vamos a llamar la class*/
+
 .card-body {
     width: 100%;     /*ajustamos el ancho primero*/
     height: 250px; /*y el alto*/
@@ -149,7 +168,10 @@ vamos a llamar la class*/
     position: relative; /* y le decimos que queremos que nuestro titulo ocupe una pisicion relativa de esta
     forma logramos que se pocisione sobre el borde*/
 }
-/*para lograr eso llamamos a la class del titulo que es la predeterminada por bootstrap y la modificamos a nuestro gusto*/
+
+/*para lograr eso llamamos a la class del titulo que es la predeterminada por bootstrap y la modificamos
+ a nuestro gusto*/
+
 .card-title {
     position: absolute; /*es que ocupe todo el espacio disponible y luego ajustamos su pocision*/
     white-space: nowrap; /*asi evitamos un salto de linea*/
@@ -162,13 +184,16 @@ vamos a llamar la class*/
     padding: 0 10px; /*un poco de relleno y listo nuestro titulo*/
     font-family: fantasy; /*definimos la fuente*/
 }
+
 /*definimos lo estilos de de nuestro parrafo dentro de la card*/
+
 .card-text{
     font-size: 32px; /*le damos un tamaños de 32 px a las letras*/
     text-align: center;/*centramos el texto*/
     margin-top: 15px; /*y le ponemos margen arriba para que baje un poco el texto y no se superponga con el titulo*/
     color: #48332b; /*con un toque de color y ya tenemos lista nuestra card*/
 }
+
 /*como ya tenemos casi toda la seccion armada solo nos falta darle estilos al footer que es el pie de pagina*/
 /*llamamos el elemento footer donde vamos a definir el pocisionamiento de mis elementos usando flexbox
 y de paso centramos el logo bien arriba en el medio y para eso definimos los siguiente valores:*/
@@ -192,12 +217,15 @@ footer {
     align-items: center; /*bien centrado*/ 
     width: 100%; /*ocupando todo el ancho disponible*/
 }
+
 .titfooter{
     text-decoration: none; /* y eliminamos el subrayado del enlace*/
     margin: 0px 0px 15px 100px; /*agregamos un margen recuerden que los valores van arriba, derecha, abajo, izq*/
     color: #f23f26; /*y le ponemos un poco de color*/
 }
+
 /*y le ponemos un hover para que cambie de color cuando el usuario apoya el mause*/
+
 .titfooter:hover {
     color: #f3e4ca;
 }
@@ -218,6 +246,7 @@ footer {
 }
 
 /*por ultimo le damos estilo al copyraight*/
+
 .copyfooter {
     font-size: 14px;/*ajustamos el tamaño de la letras*/
     width: 100%;/*le de cimos que ocupe todo el ancho disponible*/
@@ -279,6 +308,7 @@ y para que vaya con el estilo de la seccion main le vamos cambiar el color de fo
 y para eso vamos a usar los corchetes []que se usan como selectores de atributos para 
 seleccionar elementos que tienen  atributos con valores específicos, permitiendonos asi ponerle los estilos que 
 nosostros queremos*/
+
 .form input[type="email"],
 .form input[type="password"] {
     justify-content: center;/*centramos el contenedor*/
@@ -289,10 +319,11 @@ nosostros queremos*/
     padding: 10px;/*le ponemos un pooc de relleno*/
     margin-bottom: 15px;/*un margen inferior*/
     border-radius: 5px; /*redondeamos un poco el borde*/
-    background-color: #f3e4ca;/*le agregamos un color de fondo*/
-   
+    background-color: #f3e4ca;/*le agregamos un color de fondo*/  
 }
+
 /*llamamos de la misma forma al boton de ingresar*/
+
 .form input[type="submit"] {
     justify-content: center; /*centramos el contendor*/
     align-items: center;/*y los elementos*/
@@ -310,6 +341,7 @@ nosostros queremos*/
 }
 
 /*y para finalizar definimos el estilo del enlace de reseteo de clave*/
+
 .resetear-clave {
     display: block; /* Hacemos que el enlace ocupe todo el ancho disponible */
     text-align: center; /* centramos el texto del enlace */
@@ -317,19 +349,26 @@ nosostros queremos*/
     color: #f23f26; /*cambiamos el color de las letras */
     margin-top: 15px; /* añadimos un pequeño margen arriba para separar del elemento anterior */
 }
+
 /*ya tenemos definido todos lo estilos para el formato de escritorio ahora usando @media vamos a convertir
 en responsive algunas secciones de nuestra pagina salvo las card que lo vamos a hacer con bootstrap*/
 /*empezamos*/
+
 /* ponemos @media para pantallas de 240px a 400px (celulares) */
+
+
 @media (min-width: 240px) and (max-width: 400px) {
+
   header { /*llamamos a nuestro primer elemento que es el header*/
     padding: 10px; /* ajustamos el relleno */
+    width: 100%;/*ajustamos el ancho para que ocupe todo el espacio disponible*/
   }
 
-  .logo{ /*luego llamamos a nuestros logos del header*/
-    width: 80px; /* y redefinimos su ancho para que se ajusten al espacio disponible */
+  .logo{ /*luego llamamos al logo de nuestra pagina*/
+    width: 80px; /* redefinimos su ancho para que se ajuste al espacio disponible */
   }
-  .logoinisesion{
+
+  .logoinisesion{ /*ajustamos tambien el tamaño del logo de inicio de sesion*/
     width: 50px;
   }
 
@@ -339,27 +378,97 @@ en responsive algunas secciones de nuestra pagina salvo las card que lo vamos a 
     text-indent: 10px; /* ajustamos la indentación del texto */
     white-space: nowrap;/*le decimos que no queremos salto de linea en nuestro titulo*/
     margin: 2px 0; /* y el margen esto recuerden es para que se vea bien en dispositivos celulares*/
-}
-main {
-  flex-direction: column; /* Cambiamos la dirección del flex para apilar verticalmente */
-  justify-content: center;
-  align-items: center;
+    text-align: center; /*lo pocisionamos en el centro*/
 }
 
-.seccionIzq {
-  padding: 10px; /* Ajustamos el relleno para dispositivos más pequeños */
+main { /*llamamos el elemento main*/
+  flex-direction: column; /* Cambiamos la dirección del flex para apilar los elementos verticalmente */
+  justify-content: center;/*centramos los contenedores*/
+  align-items: center;/*los elementos dentro de estos*/
+  padding: 2px; /*y un poquito de relleno para separa los elementos del borde*/
 }
-.seccionIzqP{
+
+.seccionIzq { /*ahora vamos con la seccion izquierda*/
+  padding: 10px; /* ajustamos el relleno */
+}
+
+.seccionIzqP{ /*al parrafo le ajustamos el tamaño de las letras*/
   font-size: 15px;
 }
+
 .buttoninisesion,
 .buttonregistrarse {
-  font-size: 20px; /* Ajustamos el tamaño de fuente de los botones */
+  font-size: 20px; /* a los botones tambien le ajustamos el tamaño de las letras */
 }
 
-/* Ocultamos la sección derecha */
+/* y ocultamos la sección derecha para que cuando se renderice en las pantallas chicas la imagen no se vea */
+
 .seccionDerecha {
-  display: none;
+  display: none; /*para eso solo desactivamos el display*/
+}
+
+.form { /*al formulario tambien vamos hacerle algunos ajustes de tamaño*/
+  height: auto; /* cambiamos la altura a auto para que el formulario pueda crecer según el contenido */
+  top: -65px; /* y le ajustamos el top negativo para que se pocisione bien sobre el boton cuando se abra*/
+}
+
+.titleForm { /*al titulo del formulario*/
+  font-size: 16px; /* le achicamos el tamaño de las letras*/
+  top: -10px; /* ajustamos el posicionamiento negativo para que quede bien superpuesto al borde */
+  left: 2%; /* y lo deslzamos levemente a la derecha*/
+}
+
+.form h2 { /*al h2 del formulario*/
+  font-size: 24px; /* le ajustamos el tamaño de las letras */
+  padding-top: 30px; /* le ponemos relleno arriba */
+  margin-bottom: 10px; /* y un margen abajo */
+}
+
+.form input[type="email"],
+.form input[type="password"] {
+  font-size: 16px; /* ajustamos el tamaño de las letras de los type */
+}
+
+.form input[type="submit"] { /*y ajustamos los valores del boton ingresar*/
+  font-size: 24px; /* ajustamos el tamaño de las letras */
+  width: 100%; /* le decimos que ocuoe todo el ancho disponible */
+  transform: translateX(0); /* y que se quede en su pocision original a la posición original */
+}
+
+.resetear-clave { /*al link de recupero de clave*/
+  margin-top: 10px; /* le ajustamos el margen superior */
+  font-size: 14px; /* el tamaño de las letras  */
+}
+
+/*ahora ajustamos el footer*/
+
+footer {
+  padding: 15px; /* le damos un pequeño relleno*/
+}
+
+.parrafooter { 
+  flex-direction: column; /* al parrafo le cambiamos la dispocision a columna para ubicarlos uno abajo del otro */
+  align-items: center; /* y centramos los elementos */
+}
+
+.titfooter {
+  margin: 10px; /*ajustamos el margen al link de las bases y condiciones */
+}
+
+.iconoredes {
+  justify-content: center; /* cebtramos los iconos de las redes */
+  margin: 10px 0; /* ajustamos el margen vertical*/
+}
+
+.imgredes { /*y a las imagenes de los iconos*/
+  width: 40px; /* ajustamos el ancho */
+  height: auto;/*el alto*/
+  padding: 5px; /*  el relleno */
+  margin: 0 3px; /* y le damos un pequeño margen a la derecha e izquierda */
+}
+
+.copyfooter {
+  font-size: 12px; /*y al copyraight le ajustamos el tamaño de las letras*/
 }
 }
  
